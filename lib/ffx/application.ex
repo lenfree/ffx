@@ -9,7 +9,7 @@ defmodule Ffx.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      Ffx.Repo,
+      #      Ffx.Repo,
       # Start the endpoint when the application starts
       FfxWeb.Endpoint
       # Starts a worker by calling: Ffx.Worker.start_link(arg)

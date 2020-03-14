@@ -46,3 +46,9 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :xarango, :db,
+  server: "http://192.168.99.100:8529",
+  database: "ffx",
+  username: System.get_env("ARANGO_USER"),
+  password: System.get_env("ARANGO_PASSWORD")
