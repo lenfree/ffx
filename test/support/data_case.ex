@@ -23,17 +23,11 @@ defmodule Ffx.DataCase do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Ffx.DataCase
+      import ExUnit.Case
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Ffx.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Ffx.Repo, {:shared, self()})
-    end
-
     :ok
   end
 
