@@ -11,6 +11,7 @@
     - [Insert an article:](#insert-an-article)
     - [Get article](#get-article)
     - [Search article summary by tag and date](#search-article-summary-by-tag-and-date)
+  - [TODO](#todo)
   - [Learn more](#learn-more)
 
 ## Overview
@@ -64,6 +65,9 @@ docker-machine create v1
 docker-machine start v1
 eval $(docker-machine env v1)
 ```
+
+**NOTE** If you use docker for mac or on Linux, please update line 51 of `config/dev.exs` and line 13 of `config/test.exs` to point to your
+ArangoDB instance IP/hostname.
 
 ### Start ArangoDB docker container
 
@@ -156,6 +160,11 @@ $ curl localhost:4000/tags/media/20200304| jq .
   "tag": "media"
 }
 ```
+
+## TODO
+
+Increase test coverage
+Flesh out API spec
 
 ## Learn more
 
