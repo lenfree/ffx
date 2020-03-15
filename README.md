@@ -163,8 +163,9 @@ $ curl localhost:4000/tags/media/20200304| jq .
 
 ## TODO
 
-Increase test coverage
-Flesh out API spec
+- The articles field contains a list of ids for the last 10 articles entered for that day
+- Increase test coverage
+- Flesh out API spec
 
 ## Learn more
 
