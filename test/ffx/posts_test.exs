@@ -1,9 +1,9 @@
 defmodule Ffx.PostsTest do
   alias Ffx.Posts
-      use ExUnit.Case
+  use ExUnit.Case
+
   describe "articles" do
     alias Ffx.Posts
-    alias Ffx.Posts.Article
 
     @valid_attrs %{
       date: "20200304",
@@ -25,7 +25,7 @@ defmodule Ffx.PostsTest do
 
     test "get_article!/1 returns the article with given id" do
       article = article_fixture()
-      assert article = Posts.get_article!(String.replace(article.doc._id, "ffx_posts/", ""))
+      assert article == Posts.get_article!(String.replace(article.doc._id, "ffx_posts/", ""))
     end
 
     test "create_article/1 with valid data creates a article" do
